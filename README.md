@@ -4,7 +4,8 @@ flowchart LR
     Start((mulai))
     R[/r/]
     Pilihan[/pilihan/]
-    CekPilihan{"pilihan == #quot;luas#quot;"}
+    CekPilihanLuas{"pilihan == #quot;luas#quot;"}
+    CekPilihanKeliling{"pilihan == #quot;keliling#quot;"}
     HitungLuas[hasil = r * r * 3.14]
     HitungKeliling[hasil = 2 * r * 3.14]
     CetakHasil[/hasil/]
@@ -12,9 +13,13 @@ flowchart LR
 
     Start --> Pilihan
     Pilihan --> R
-    R --> CekPilihan
-    CekPilihan --> |yes| HitungLuas
-    CekPilihan --> |no| HitungKeliling
-    HitungLuas & HitungKeliling --> CetakHasil
+    R --> CekPilihanLuas
+    CekPilihanLuas --> |yes| HitungLuas
+    CekPilihanLuas --> |no| CekPilihanKeliling
+    CekPilihanKeliling --> |yes| HitungKeliling
+    CekPilihanKeliling --> |no| End
+    HitungKeliling --> CetakHasil
+    HitungLuas --> CetakHasil
     CetakHasil --> End
+    
 ```
