@@ -1,3 +1,10 @@
 const r = 4;
-console.log(r**2 * 3.14);
-console.log(2 * r * 3.14);
+const pilihan = "luas";
+let hasil;
+
+if (pilihan == "luas"){
+    hasil = r ** 2 * 3.14;
+}else{
+    hasil = 2 * r * 3.14;
+}
+console.log(hasil);
