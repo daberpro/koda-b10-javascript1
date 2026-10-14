@@ -4,7 +4,10 @@ let hasil;
 
 if (pilihan == "luas"){
     hasil = r ** 2 * 3.14;
+    console.log(hasil);
 }else{
-    hasil = 2 * r * 3.14;
+    if(pilihan == "keliling"){
+        hasil = 2 * r * 3.14;
+        console.log(hasil);
+    }
 }
-console.log(hasil);
