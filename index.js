@@ -1,23 +1,27 @@
-const lingkaran = {
+const obj = {
     radius: 0,
     keliling: 0,
-    luas: 0,
-    cekApakahLebihKecilDariNol(){
-        if (this.radius < 0){
-            this.radius = 0;
-        }    
-    }, 
-    hitungKelilingDanLuas(){
-        this.cekApakahLebihKecilDariNol();
-        this.keliling = this.radius**2 * 3.14;
-        this.luas = this.radius * 2 * 3.14;
-    },
-    cetakHasil(){
-        this.hitungKelilingDanLuas();
-        console.log(this.keliling);
-        console.log(this.luas)
-    }
+    luas: 0
 };
 
-lingkaran.radius = 4;
-lingkaran.cetakHasil();
+function cekApakahLebihKecilDariNol(l){
+    if(l.radius < 0){
+        l.radius = 0;
+    }
+}
+
+function hitungLuasDanKeliling(l,cek_r){
+    cek_r(l);
+    l.keliling = l.radius**2 * 3.14;
+    l.luas = l.radius * 2 * 3.14;
+}
+
+function tampilkanKelilingDanLuasLingkaran(lingkaran, hitung_fn){
+    hitung_fn(lingkaran, cekApakahLebihKecilDariNol);
+    const { keliling, luas } = lingkaran;
+    console.log(keliling);
+    console.log(luas);
+}
+
+obj.radius = 4;
+tampilkanKelilingDanLuasLingkaran(obj, hitungLuasDanKeliling);
