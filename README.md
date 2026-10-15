@@ -1,7 +1,8 @@
 ### Penjelasan kode JS
-saya membuat variabel lingkaran yang miliki properti radius, keliling, dan luas, selain itu ada juga 3 method yakni cekApakahLebihKecilDariNol, HitungKelilingDanLuas, dan CetakHasil \
-jika ingin mengubah nilai radius cukup reassign nilai property radius, kemudian panggil method CetakHasil untuk melihat output, ketika method CetakHasil atau HitungKelilingDanLuas dipanggil
-maka nilai properti keliling dan luas juga akan diupdate
+saya membuat variabel obj yang berisi properti radius, keliling, dan luas. kemudian saya membuat 3 fungsi yakni cekApakahLebihKecilDariNol, hitungLuasDanKeliling, dan tampilkanKelilingDanLuasLingkaran.
+untuk function cekApakahLebihKecilDariNol hanya menerima parameter l yang harus diisi dengan objek obj, kemudian untuk function hitungLuasDanKeliling memiliki dua parameter yang pertama objek obj
+dan yang kedua adalah callback untuk function cekApakahLebihKecilDariNol, terakhir function tampilkanKelilingDanLuasLingkaran memiliki parameter pertama untuk menerima objek obj dan menerima callback hitungLuasDanKeliling
+
 
 ```mermaid
 
