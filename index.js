@@ -1,23 +1,23 @@
-let r = 4;
-// pure function
-function cekApakahLebihKecilDariNol(radius){
-    if (radius < 0){
-        return 0;
+const lingkaran = {
+    radius: 0,
+    keliling: 0,
+    luas: 0,
+    cekApakahLebihKecilDariNol(){
+        if (this.radius < 0){
+            this.radius = 0;
+        }    
+    }, 
+    HitungKelilingDanLuas(){
+        this.cekApakahLebihKecilDariNol();
+        this.keliling = this.radius**2 * 3.14;
+        this.luas = this.radius * 2 * 3.14;
+    },
+    CetakHasil(){
+        this.HitungKelilingDanLuas();
+        console.log(this.keliling);
+        console.log(this.luas)
     }
-    return radius;
-}
+};
 
-// impure function
-function HitungKelilingDanLuas(){
-    r = cekApakahLebihKecilDariNol(r);
-    const keliling = r**2 * 3.14;
-    const luas = r * 2 * 3.14;
-    return [
-        keliling,
-        luas
-    ];
-}
-
-const [keliling, luas] = HitungKelilingDanLuas(r);
-console.log(keliling);
-console.log(luas);
+lingkaran.radius = 4;
+lingkaran.CetakHasil();
