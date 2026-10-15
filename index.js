@@ -7,17 +7,17 @@ const lingkaran = {
             this.radius = 0;
         }    
     }, 
-    HitungKelilingDanLuas(){
+    hitungKelilingDanLuas(){
         this.cekApakahLebihKecilDariNol();
         this.keliling = this.radius**2 * 3.14;
         this.luas = this.radius * 2 * 3.14;
     },
-    CetakHasil(){
-        this.HitungKelilingDanLuas();
+    cetakHasil(){
+        this.hitungKelilingDanLuas();
         console.log(this.keliling);
         console.log(this.luas)
     }
 };
 
 lingkaran.radius = 4;
-lingkaran.CetakHasil();
+lingkaran.cetakHasil();
