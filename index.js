@@ -2,8 +2,9 @@ let r = 4;
 // pure function
 function cekApakahLebihKecilDariNol(radius){
     if (radius < 0){
-        radius = 0;
+        return 0;
     }
+    return radius;
 }
 
 // impure function
