@@ -9,8 +9,8 @@ function HitungKeliling(){
 }
 
 // pure function hanya mengakses data melalui parameter
-function HitungLuas(r) {
-    return r * 2 * 3.14;
+function HitungLuas(radius) {
+    return radius * 2 * 3.14;
 }
 
 
